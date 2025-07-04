@@ -5369,23 +5369,23 @@ a.badge-dark.focus {
 }
 
 .timer-wrapper {
-    position: relative;
+       position: relative;
     width: 100%;
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background-image: url('../img/timer-bg.svg'); /* Replace with the actual image path from the provided image */
+    padding: 5px;
+    background-image: url(../img/timer-bg.svg);
     background-size: cover;
     background-position: center;
-    border-radius: 10px; /* Optional: if you want rounded corners for the background */
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 610px; /* Adjust to fit the image dimensions */
+    min-height: 610px;
 }
 
 .timer-content {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white circle */
+    background-color: none; /* Slightly transparent white circle */
     border-radius: 50%;
     width: 400px; /* Diameter of the circle */
     height: 400px; /* Diameter of the circle */
@@ -10300,16 +10300,16 @@ a.text-dark:focus {
 }
 @media (max-width: 768px) {
 .timer-content{
-    width: 220px;
-    height: 220px;
+    width: 255px;
+    height: 255px;
 }
 .timer-countdown {
     gap: 6px;
 }
 
 .timer-wrapper {
-min-height: 322px;
-        width: 85%;
+        min-height: 305px;
+        width: 80%;
 }
 }
 @media (min-width: 768px) {
