@@ -10169,6 +10169,15 @@ a.text-dark:focus {
         padding: 10px 0;
     }
 }
+.names-head{
+    font-size: 13px !important;
+}
+.names-and{
+    font-size: 25px !important;
+}
+.names-info{
+    font-size: 20px !important;
+}
 .carousel-caption {
     top: 0;
     left: 0;
