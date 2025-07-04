@@ -10304,12 +10304,12 @@ a.text-dark:focus {
     height: 220px;
 }
 .timer-countdown {
-    gap: 4px;
+    gap: 6px;
 }
 
 .timer-wrapper {
-    min-height: 310px;
-    width: 80%;
+min-height: 322px;
+        width: 85%;
 }
 }
 @media (min-width: 768px) {
