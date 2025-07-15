@@ -5375,7 +5375,8 @@ a.badge-dark.focus {
     margin: 0 auto;
     padding: 5px;
     background-image: url(../img/timer-bg.svg);
-    background-size: cover;
+        background-size: revert;
+    background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
     display: flex;
