@@ -26,29 +26,109 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-       <audio id="backgroundMusic" loop>
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio id="backgroundMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div id="musicModal" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Welcome</h2>
+    <p>Would you like to enjoy the Invitation with background music?</p>
+    <div class="modal-buttons">
+      <button id="withMusic">Enter with Music</button>
+      <button id="withoutMusic">Enter without Music</button>
+    </div>
+  </div>
+</div>
+<style>
+  .modal-overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    max-width: 90%;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease;
+  }
+
+  .modal-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .modal-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .modal-buttons button {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  #withMusic {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  #withMusic:hover {
+    background-color: #45a049;
+  }
+
+  #withoutMusic {
+    background-color: #ccc;
+  }
+
+  #withoutMusic:hover {
+    background-color: #bbb;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const music = document.getElementById('backgroundMusic');
+    const modal = document.getElementById('musicModal');
+    const withMusicBtn = document.getElementById('withMusic');
+    const withoutMusicBtn = document.getElementById('withoutMusic');
 
-    function startMusic() {
-      music.play().catch(error => {
-        console.log('Autoplay blocked:', error);
+    withMusicBtn.addEventListener('click', function () {
+      music.play().catch(err => {
+        console.log('Autoplay failed:', err);
       });
-      // Remove both listeners after first play attempt
-      document.removeEventListener('click', startMusic);
-      document.removeEventListener('scroll', startMusic);
-    }
+      modal.remove();
+    });
 
-    document.addEventListener('click', startMusic, { once: true });
-    document.addEventListener('scroll', startMusic, { once: true });
+    withoutMusicBtn.addEventListener('click', function () {
+      modal.remove();
+    });
   });
 </script>
-
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
