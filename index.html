@@ -31,7 +31,7 @@
         <source src="song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-   <script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     const music = document.getElementById('backgroundMusic');
 
@@ -39,12 +39,16 @@
       music.play().catch(error => {
         console.log('Autoplay blocked:', error);
       });
+      // Remove both listeners after first play attempt
       document.removeEventListener('click', startMusic);
+      document.removeEventListener('scroll', startMusic);
     }
 
-    document.addEventListener('click', startMusic);
+    document.addEventListener('click', startMusic, { once: true });
+    document.addEventListener('scroll', startMusic, { once: true });
   });
 </script>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
