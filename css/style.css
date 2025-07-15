@@ -2639,11 +2639,11 @@ fieldset:disabled a.btn {
 
 
 .event-card {
-    background-color: #c8dab9;
+
     padding: 30px;
     margin: 20px; /* Spacing between cards */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px #C5B358;
     text-align: center;
     position: relative;
     z-index: 2; /* Ensures card content is above the line */
@@ -10176,7 +10176,7 @@ a.text-dark:focus {
     font-size: 25px !important;
 }
 .names-info{
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 .carousel-caption {
     top: 0;
@@ -10318,7 +10318,7 @@ a.text-dark:focus {
 
 .timer-wrapper {
         min-height: 305px;
-        width: 90%;
+        width: 80%;
 }
 }
 @media (min-width: 768px) {
