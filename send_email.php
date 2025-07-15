@@ -1,39 +1,35 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// Get form data
+$guestName = $_POST['guestName'] ?? '';
+$attendance = $_POST['attendance'] ?? '';
+$guestCount = $_POST['guestCount'] ?? '';
 
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
-require 'src/Exception.php';
+// Create an array to store new data
+$newEntry = [
+    'name' => $guestName,
+    'attendance' => $attendance,
+    'guestCount' => $guestCount,
+    'submittedAt' => date('Y-m-d H:i:s')
+];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['guestName'];
-    $guests = $_POST['guestCount'];
-    $attending = $_POST['attendance'];
+// File to store the responses
+$file = 'responses.json';
 
-    $mail = new PHPMailer(true);
-    try {
-        // Server settings
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'your_sender@gmail.com';
-        $mail->Password = 'your_16_digit_app_password'; // App password
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
-
-        // Recipients
-        $mail->setFrom('your_sender@gmail.com', 'Wedding RSVP');
-        $mail->addAddress('your_receiver@gmail.com');
-
-        // Content
-        $mail->Subject = 'RSVP Submission';
-        $mail->Body    = "Name: $name\nGuests: $guests\nAttending: $attending";
-
-        $mail->send();
-        echo "Message sent!";
-    } catch (Exception $e) {
-        echo "Mailer Error: {$mail->ErrorInfo}";
-    }
+// Read existing data
+if (file_exists($file)) {
+    $jsonData = file_get_contents($file);
+    $data = json_decode($jsonData, true);
+} else {
+    $data = [];
 }
+
+// Add new entry
+$data[] = $newEntry;
+
+// Save back to file
+file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
+
+// Redirect or confirm submission
+header('Location: thank-you.html'); // optional redirect
+exit;
 ?>

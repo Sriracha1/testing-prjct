@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>Elie & Jodine - Wedding Invitation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description"> -->
+    <meta content="Elie & Jodine - Wedding Invitation" name="description"> 
 
     <!-- Favicon -->
     <link href="img/fav.png" rel="icon">
@@ -28,6 +27,24 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+       <audio id="backgroundMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const music = document.getElementById('backgroundMusic');
+
+    function startMusic() {
+      music.play().catch(error => {
+        console.log('Autoplay blocked:', error);
+      });
+      document.removeEventListener('click', startMusic);
+    }
+
+    document.addEventListener('click', startMusic);
+  });
+</script>
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -64,9 +81,8 @@
 
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                
-                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
+                   <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/f121fcca-6e97-44f4-92ef-99441a6691d5.jpeg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Elie & Jodine</h1>
@@ -84,8 +100,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item position-relative " style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/2bf33668-d1f1-4e8a-a835-30ab22fa3887.jpeg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Elie & Jodine</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">"What therefore God hath joined together, let not man put asunder.<br> -Mark 10:9"
+                                </h3>
+                            </div>
+
+
+                            <h4 class="display-1 font-secondary text-white pt-4 mb-md-4" style="font-size: 45px;">
+                                06-09-2025</h4>
+                            <!-- <button type="button" class="btn-play mx-auto" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                <span></span>
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/8cd28a9b-854a-433c-b19e-aaa5b62a387e.jpeg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Elie & Jodine</h1>
@@ -101,6 +136,7 @@
                         </div>
                     </div>
                 </div>
+               
             </div>
             <!-- <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
                 <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
@@ -305,22 +341,18 @@
         </div>
 
     <div class="row" style="justify-content: center;">
-    <div class="col-4">
+    <div class="col-5">
         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
             <h4 class="font-secondary names-head" style="color: #9bae7f; font-size: 20px; text-align: center;">Mr. & Mrs.
             </h4>
-            <p class="mb-2 names-info" style="color: #9bae7f; text-align: center; font-size: 30px;">Norma Diab<br> Tannous <br>and Family</p>
+            <p class="mb-2 names-info" style="color: #9bae7f; text-align: center; font-size: 30px;">Norma Diab<br>Tannous <br>& Family</p>
         </div>
     </div>
-    <div class="col-2">
-        <h1 class="font-secondary names-and" style="color: #9bae7f; font-size: 50px; text-align: center; margin-top: 32px; margin-bottom: 32px;">&
-        </h1>
-    </div>
-    <div class="col-4">
+    <div class="col-6">
         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
             <h4 class="font-secondary names-head" style="color: #9bae7f; font-size: 20px; text-align: center;">Mr. & Mrs.
             </h4>
-            <p class="mb-2 names-info" style="color: #9bae7f; text-align: center; font-size: 30px;">Emile & Marcelle <br> Harb</p>
+            <p class="mb-2 names-info" style="color: #9bae7f; text-align: center; font-size: 30px;">Emile & Marcelle <br> Harb<br>& Family</p>
         </div>
     </div>
 </div>
@@ -398,7 +430,8 @@
                     <p class="event-info">Monsef</p>
 <br>
                     <!-- <button class="font-weight-bold event-button how-to-get"></button> -->
-                      <button  class="btn btn-primary font-weight-bold py-3 px-5" style="border-radius: 5px;" type="submit">Map Location</button>
+                     <a href="https://maps.app.goo.gl/V4BQDt1deSzSK8BJA"  class="btn btn-primary font-weight-bold py-3 px-5" style="border-radius: 5px;" type="submit"  target="_blank"
+   rel="noopener noreferrer">Map Location</a>
                 </div>
             </div>
 
@@ -438,6 +471,7 @@
             <div class="section-title position-relative text-center">
                 <!-- <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6> -->
                 <h1 class="font-secondary display-4 text-gold">Join Our Party</h1>
+                 <p class="fs-5 mb-4 pb-2 text-gold" style="color: #6C757D;">Kindly Reply Before 15 August</p>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -450,18 +484,19 @@
                               
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px; " id="guestCount"  name="guestCount" required>
-                                    </select>
-                                </div>
-                            </div>
-            
-                            <div class="form-group">
                                  <select class="form-control bg-secondary border-0" style="height: 52px;" name="attendance" required>
                                         <option>I'm Attending</option>
                                         <option>Yes</option>
                                         <option>No</option>
                                     </select>
                             </div>
+                                <div class="form-group col-sm-6">
+                                    <select class="form-control bg-secondary border-0" style="height: 52px; " id="guestCount"  name="guestCount" required>
+                                    </select>
+                                </div>
+                            </div>
+            
+                            
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
                             </div>
@@ -479,7 +514,7 @@
             <div class="col-lg-7 text-center">
                  <h1 class="font-secondary display-4 text-gold">Gifts</h1>
                 <p class="fs-5 mb-4 pb-2 text-gold" style="color: #6C757D;">Gifts are optional, your love is priceless.</p>
-                <h2 class="fs-5 mb-5" style="color: #9bae7f">Whish ID account: 111111</h2>
+                <h2 class="fs-5 mb-5" style="color: #9bae7f">Whish ID account:<br> 20990765</h2>
                 <div class="fs-5 mb-5 mx-auto d-block"  style="width: 100px; height: 100px;">
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 114" width="96" height="114" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_211"><rect width="96" height="114" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_211)"><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,48.388999938964844,86.24800109863281)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M27.260000228881836,-23.70400047302246 C27.260000228881836,-23.70400047302246 27.260000228881836,16.000999450683594 27.260000228881836,16.000999450683594 C27.260000228881836,20.2549991607666 23.81100082397461,23.70400047302246 19.55699920654297,23.70400047302246 C19.55699920654297,23.70400047302246 -19.55500030517578,23.70400047302246 -19.55500030517578,23.70400047302246 C-23.809999465942383,23.70400047302246 -27.260000228881836,20.2549991607666 -27.260000228881836,16.000999450683594 C-27.260000228881836,16.000999450683594 -27.260000228881836,-23.70400047302246 -27.260000228881836,-23.70400047302246 C-27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246z"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M41.20399856567383,109.95099639892578 C41.20399856567383,109.95099639892578 41.20399856567383,62.395999908447266 41.20399856567383,62.395999908447266"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M54.5369987487793,62.61800003051758 C54.5369987487793,62.61800003051758 54.5369987487793,109.95099639892578 54.5369987487793,109.95099639892578"></path></g></g><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M54.5369987487793,62.395999908447266 C54.5369987487793,62.395999908447266 54.5369987487793,44.84000015258789 54.5369987487793,44.84000015258789"></path></g><g opacity="1" transform="matrix(1,0,0,1,47.5,53.50699996948242)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M30.309999465942383,9.036999702453613 C30.309999465942383,9.036999702453613 -30.30900001525879,9.036999702453613 -30.30900001525879,9.036999702453613 C-33.534000396728516,9.036999702453613 -36.14799880981445,6.421999931335449 -36.14799880981445,3.197000026702881 C-36.14799880981445,3.197000026702881 -36.14799880981445,-3.197999954223633 -36.14799880981445,-3.197999954223633 C-36.14799880981445,-6.422999858856201 -33.534000396728516,-9.036999702453613 -30.30900001525879,-9.036999702453613 C-30.30900001525879,-9.036999702453613 30.309999465942383,-9.036999702453613 30.309999465942383,-9.036999702453613 C33.53499984741211,-9.036999702453613 36.14799880981445,-6.422999858856201 36.14799880981445,-3.197999954223633 C36.14799880981445,-3.197999954223633 36.14799880981445,3.197000026702881 36.14799880981445,3.197000026702881 C36.14799880981445,6.421999931335449 33.53499984741211,9.036999702453613 30.309999465942383,9.036999702453613z"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M41.20399856567383,62.395999908447266 C41.20399856567383,62.395999908447266 41.20399856567383,44.84000015258789 41.20399856567383,44.84000015258789"></path></g></g><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,47.64699935913086,33.92300033569336)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(129,148,139)" stroke-opacity="1" stroke-width="3" d=" M-0.6869999766349792,8.565999984741211 C-2.431999921798706,2.1489999294281006 -7.488999843597412,-10.281000137329102 -20.489999771118164,-10.281000137329102 C-25.785999298095703,-10.281000137329102 -29.073999404907227,-8.190999984741211 -29.073999404907227,-4.820000171661377 C-29.073999404907227,1.3029999732971191 -19.075000762939453,9.696999549865723 -0.25999999046325684,10.281000137329102 C-0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 C19.075000762939453,9.696999549865723 29.073999404907227,1.3029999732971191 29.073999404907227,-4.820000171661377 C29.073999404907227,-8.190999984741211 25.785999298095703,-10.281000137329102 20.489999771118164,-10.281000137329102 C7.63700008392334,-10.281000137329102 2.546999931335449,1.8669999837875366 0.746999979019165,8.343999862670898"></path></g></g></g></svg>
                 </div>
@@ -532,9 +567,153 @@
     const nameKey = params.get('name');
 
     const guestMappings = {
-      charbel: { name: 'Charbel', maxGuests: 2 },
-      jodine: { name: 'Jodine', maxGuests: 1 },
-      elie: { name: 'Elie', maxGuests: 4 }
+     emileandmarcelleharb: { name: "Emile & Marcelle Harb", maxGuests: 2 },
+  jadharb: { name: "Jad Harb", maxGuests: 1 },
+  joyaharb: { name: "Joya Harb", maxGuests: 1 },
+  lanaharb: { name: "Lana Harb", maxGuests: 1 },
+  chekriandsonianajem: { name: "Chekri & Sonia Najem", maxGuests: 2 },
+  jeanpierreandsamarnajem: { name: "Jean Pierre & Samar Najem", maxGuests: 2 },
+  paulmarcandmiranajem: { name: "Paul Marc & Mira Najem", maxGuests: 2 },
+  nabilandgracechoucair: { name: "Nabil & Grace Choucair", maxGuests: 2 },
+  chadyandritakhoury: { name: "Chady & Rita Khoury", maxGuests: 2 },
+  elsynajem: { name: "Elsy Najem", maxGuests: 1 },
+  walidnajem: { name: "Walid Najem", maxGuests: 1 },
+  marounandjessicayoussef: { name: "Maroun & Jessica Youssef", maxGuests: 2 },
+  charbelandchristanajem: { name: "Charbel & Christa Najem", maxGuests: 2 },
+  nabilandlilianeharb: { name: "Nabil & Liliane Harb", maxGuests: 3 },
+  kamalanddialaharb: { name: "Kamal & Diala Harb", maxGuests: 3 },
+  rajaaandaidakaram: { name: "Rajaa & Aida Karam", maxGuests: 2 },
+  monaaoun: { name: "Mona Aoun", maxGuests: 1 },
+  royandmanaraoun: { name: "Roy & Manar Aoun", maxGuests: 2 },
+  rodrigueandstephanieaoun: { name: "Rodrigue & Stephanie Aoun", maxGuests: 2 },
+  richardandrodicanahed: { name: "Richard & Rodica Nahed", maxGuests: 2 },
+  wafaaboumalham: { name: "Wafaa Bou Malham", maxGuests: 3 },
+  charbelboumalham: { name: "Charbel Bou Malham", maxGuests: 2 },
+  tonyandnisreenelmsan: { name: "Tony & Nisreen El Msan", maxGuests: 2 },
+  alainandmaymaksoud: { name: "Alain & May Maksoud", maxGuests: 2 },
+  georgesandrindalagerges: { name: "Georges & Rindala Gerges", maxGuests: 2 },
+  fadymaksoud: { name: "Fady Maksoud", maxGuests: 1 },
+  edwardandcoletteboumalham: { name: "Edward & Colette Bou Malham", maxGuests: 3 },
+  elieandvanessamatta: { name: "Elie & Vanessa Matta", maxGuests: 2 },
+  jeryesboumalham: { name: "Jeryes Bou Malham", maxGuests: 2 },
+  najinandnadineboumalham: { name: "Naji & Nadine Bou Malham", maxGuests: 4 },
+  moussa: { name: "Moussa", maxGuests: 2 },
+  alichahoud: { name: "Ali Chahoud", maxGuests: 1 },
+  alecandcarinekaddoum: { name: "Alec & Carine Kaddoum", maxGuests: 4 },
+  mayaharb: { name: "Maya Harb", maxGuests: 1 },
+  yaraharb: { name: "Yara Harb", maxGuests: 1 },
+  gabymaroun: { name: "Gaby Maroun", maxGuests: 1 },
+  charbelkaram: { name: "Charbel Karam", maxGuests: 1 },
+  hamidmatar: { name: "Hamid Matar", maxGuests: 1 },
+  angelaabiakel: { name: "Angela Abi Akel", maxGuests: 1 },
+  marianeabiakel: { name: "Mariane Abi Akel", maxGuests: 1 },
+  lucyboulos: { name: "Lucy Boulos", maxGuests: 1 },
+  karimandjoumanamawla: { name: "Karim & Joumana Mawla", maxGuests: 2 },
+  celinazoughbi: { name: "Celina Zoughbi", maxGuests: 1 },
+  tatianayaakoub: { name: "Tatiana Yaakoub", maxGuests: 1 },
+  naderandmariahaidar: { name: "Nader & Maria Haidar", maxGuests: 2 },
+  aminandpaulaharb: { name: "Amin & Paula Harb", maxGuests: 2 },
+  atefandsuzanharb: { name: "Atef & Suzan Harb", maxGuests: 2 },
+  nahdetandamaltarabay: { name: "Nahdet & Amal Tarabay", maxGuests: 2 },
+  samirandjamalelias: { name: "Samir & Jamal Elias", maxGuests: 2 },
+  georgesandthereseeid: { name: "Georges & Therese Eid", maxGuests: 2 },
+  zalfaandjoudmattar: { name: "Zalfa & Joud Mattar", maxGuests: 2 },
+  pierreandchristianaharb: { name: "Pierre & Christiana Harb", maxGuests: 2 },
+  royandmichellekhoury: { name: "Roy & Michelle Khoury", maxGuests: 2 },
+  chahidandnadiasaad: { name: "Chahid & Nadia Saad", maxGuests: 2 },
+  normatanous: { name: "Norma Tanous", maxGuests: 1 },
+  tonyandhelenatanous: { name: "Tony & Helena Tanous", maxGuests: 3 },
+  georgesandmarieaboudaher: { name: "Georges & Marie Abou Daher", maxGuests: 4 },
+  marounandnadaabourizik: { name: "Maroun & Nada Abou Rizik", maxGuests: 5 },
+  charbelandsuzanemouzawak: { name: "Charbel & Suzane  Mouzawak", maxGuests: 2 },
+  elieandjoellemouzawak: { name: "Elie and Joelle Mouzawak", maxGuests: 2 },
+  julienandstephaniebassil: { name: "Julien & Stephanie Bassil", maxGuests: 2 },
+  elieandnathaliehomsi: { name: "Elie & Nathalie Homsi", maxGuests: 2 },
+  georgesandmariefrancis: { name: "Georges & Marie Francis", maxGuests: 4 },
+  michelandgermainerahban: { name: "Michel & Germaine Rahban", maxGuests: 2 },
+  tonyandmimochediac: { name: "Tony & Mimo Chediac", maxGuests: 2 },
+  ruchdiandsouhailatanous: { name: "Ruchdi & Souhaila Tanous", maxGuests: 2 },
+  samirandmiranohra: { name: "Samir & Mira Nohra", maxGuests: 2 },
+  raniatanous: { name: "Rania Tanous", maxGuests: 2 },
+  fadyandroulatanous: { name: "Fady & Roula Tanous", maxGuests: 2 },
+  larytanous: { name: "Lary Tanous", maxGuests: 2 },
+  guyasmar: { name: "Guy Asmar", maxGuests: 2 },
+  vinayounes: { name: "Vina Younes", maxGuests: 1 },
+  patrickandmichahajassaf: { name: "Patrick & Micha Haj Assaf", maxGuests: 2 },
+  fredyandjoellemouzaaber: { name: "Fredy & Joelle Mouzaaber", maxGuests: 2 },
+  abdobousaleh: { name: "Abdo Bou Saleh", maxGuests: 1 },
+  charbelandchristellebousaleh: { name: "Charbel & Christelle Bou Saleh", maxGuests: 2 },
+  abdoandmaryfayad: { name: "Abdo & Mary Fayad", maxGuests: 2 },
+  elieandarmigdiab: { name: "Elie & Armig Diab", maxGuests: 2 },
+  habibandjennychahine: { name: "Habib & Jenny Chahine", maxGuests: 2 },
+  georgesandstacyattieh: { name: "Georges & Stacy Attieh", maxGuests: 2 },
+  kevoandnancyapkarian: { name: "Kevo & Nancy Apkarian", maxGuests: 2 },
+  joeandsaranghaywe: { name: "Joe & Sara Nghaywe", maxGuests: 2 },
+  wissamandjessyboukheir: { name: "Wissam & Jessy Bou Kheir", maxGuests: 2 },
+  guyandmariejoeyaakoub: { name: "Guy & Marie joe Yaakoub", maxGuests: 2 },
+  gerardandnaylacheikhwafa: { name: "Gerard & Nayla Cheikh Wafa", maxGuests: 2 },
+  maitrerichardandtatianamoussa: { name: "Maitre Richard & Tatiana Moussa", maxGuests: 2 },
+  georgesrouhana: { name: "Georges Rouhana", maxGuests: 1 },
+  eidandmarianaser: { name: "Eid & Maria Naser", maxGuests: 4 },
+  alainandjiovannanaser: { name: "Alain & Jiovanna Naser", maxGuests: 2 },
+  tonyandmatta: { name: "Tony & Matta", maxGuests: 2 },
+  tonyandrananemer: { name: "Tony & Rana Nemer", maxGuests: 2 },
+  charleshelo: { name: "Charles Helo", maxGuests: 2 },
+  jeanwehbe: { name: "Jean Wehbe", maxGuests: 2 },
+  davidandmichaasmar: { name: "David & Micha Asmar", maxGuests: 2 },
+  frankyandjuliyaghy: { name: "Franky & Juli Yaghy", maxGuests: 2 },
+  cezarandcarlaatallah: { name: "Cezar & Carla Atallah", maxGuests: 2 },
+  alainandfadiadagher: { name: "Alain & Fadia Dagher", maxGuests: 2 },
+  aminandromybaz: { name: "Amin & Romy Baz", maxGuests: 2 },
+  elieandnancyharfouch: { name: "Elie & Nancy Harfouch", maxGuests: 2 },
+  anthonyandmeghrigaoun: { name: "Anthony & Meghrig Aoun", maxGuests: 2 },
+  paulandpaularayes: { name: "Paul & Paula Rayes", maxGuests: 2 },
+  andreandtheresakhalil: { name: "Andre & Theresa Khalil", maxGuests: 2 },
+  josephandmelissasabagh: { name: "Joseph & Melissa Sabagh", maxGuests: 2 },
+  georgesandhelenacherfane: { name: "Georges & Helena Cherfane", maxGuests: 2 },
+  danyandkarencherfane: { name: "Dany & Karen Cherfane", maxGuests: 2 },
+  marwanandalinehelo: { name: "Marwan & Aline Helo", maxGuests: 2 },
+  elieandmiabougebrayel: { name: "Elie & Mia Bou Gebrayel", maxGuests: 2 },
+  roymaalouf: { name: "Roy Maalouf", maxGuests: 1 },
+  samirandmichaabiabdallah: { name: "Samir & Micha Abi Abdallah", maxGuests: 2 },
+  pierrenahas: { name: "Pierre Nahas", maxGuests: 2 },
+  elieandjoannanaser: { name: "Elie & Joanna naser", maxGuests: 2 },
+  eliekouba: { name: "Elie kouba", maxGuests: 2 },
+  georgesandabirkhaled: { name: "Georges & Abir Khaled", maxGuests: 2 },
+  elieandnathaliesafade: { name: "Elie & Nathalie Safade", maxGuests: 2 },
+  tonykaram: { name: "Tony Karam", maxGuests: 2 },
+  jeffryandanastasiabustani: { name: "Jeffry & Anastasia Bustani", maxGuests: 2 },
+  wissamandmariaarab: { name: "Wissam & maria Arab", maxGuests: 2 },
+  naderandfatennahle: { name: "Nader & Faten Nahle", maxGuests: 2 },
+  elieandmuriellehajal: { name: "Elie & Murielle Hajal", maxGuests: 2 },
+  ibrahimandjoellehanna: { name: "Ibrahim & Joelle Hanna", maxGuests: 2 },
+  fadyandjennychamas: { name: "Fady & Jenny Chamas", maxGuests: 2 },
+  mohamadandfarahdandashle: { name: "Mohamad & Farah Dandashle", maxGuests: 2 },
+  nicolekhoury: { name: "Nicole Khoury", maxGuests: 1 },
+  abdobassil: { name: "Abdo Bassil", maxGuests: 1 },
+  simonmghayzel: { name: "Simon Mghayzel", maxGuests: 2 },
+  halaharout: { name: "Hala Harout", maxGuests: 2 },
+  eliegerges: { name: "Elie Gerges", maxGuests: 2 },
+  wissamabihanna: { name: "Wissam Abi Hanna", maxGuests: 2 },
+  jadbustani: { name: "Jad Bustani", maxGuests: 2 },
+  bacharalzaher: { name: "Bachar Al Zaher", maxGuests: 2 },
+  samarsarkis: { name: "Samar Sarkis", maxGuests: 2 },
+  mounirbadawi: { name: "Mounir Badawi", maxGuests: 2 },
+  marianeaoun: { name: "Mariane Aoun", maxGuests: 2 },
+  abdallahrammal: { name: "Abdallah Rammal", maxGuests: 2 },
+  carolebechara: { name: "Carole Bechara", maxGuests: 2 },
+  naamtallayounes: { name: "Naamtalla Younes", maxGuests: 2 },
+  johnnybader: { name: "Johnny Bader", maxGuests: 1 },
+  fouadhaddad: { name: "Fouad Haddad", maxGuests: 2 },
+  georgesmaroun: { name: "Georges Maroun", maxGuests: 2 },
+  patrickkhoriaty: { name: "Patrick Khoriaty", maxGuests: 2 },
+  naderdarwich: { name: "Nader Darwich", maxGuests: 2 },
+  toninayaakoub: { name: "Tonina Yaakoub", maxGuests: 1 },
+  hassanhoteit: { name: "Hassan hoteit", maxGuests: 2 },
+  bobkhalil: { name: "Bob khalil", maxGuests: 2 },
+  fadifarhat: { name: "Fadi farhat", maxGuests: 2 },
+  zeinakanaan: { name: "Zeina Kanaan", maxGuests: 1 },
+  ibrahimandtaniakanaan: { name: "Ibrahim & Tania Kanaan", maxGuests: 3 }
     };
 
     const guestData = nameKey ? guestMappings[nameKey.toLowerCase()] : null;
@@ -554,7 +733,7 @@
         defaultOption.selected = true;
         guestCountSelect.appendChild(defaultOption);
 
-        for (let i = 0; i <= guestData.maxGuests; i++) {
+        for (let i = 1; i <= guestData.maxGuests; i++) {
           const option = document.createElement('option');
           option.value = i;
           option.text = i;
