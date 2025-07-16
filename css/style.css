@@ -10197,7 +10197,7 @@ a.text-dark:focus {
     content: "";
     width: 60px;
     height: 2px;
-    bottom: 11px;
+    bottom: -15px;
     left: calc(50% - 80px);
     background: #9bae7f;
 }
@@ -10207,7 +10207,7 @@ a.text-dark:focus {
     content: "";
     width: 60px;
     height: 2px;
-    bottom: 11px;
+    bottom: -15px;
     right: calc(50% - 80px);
     background: #9bae7f;
 }
@@ -10422,4 +10422,8 @@ a.text-dark:focus {
     #event .border-right {
         border-right: none !important;
     }
+    .timer-header {
+    font-size: 21px;
+
+}
 }
